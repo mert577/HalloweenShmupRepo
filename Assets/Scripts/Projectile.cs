@@ -5,17 +5,28 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     public float projectileSpeed;
+    public float projectileLifeTime;
 
-    Vector2 direction;
+
+
+
+    protected Vector2 direction;
+
+    protected float lifeTime=0;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+
+    private void Start()
+    {
+        Initilize();
+    }
 
     public  void SetProjectileDirection(Vector2 _direction)
     {
@@ -31,5 +42,23 @@ public class Projectile : MonoBehaviour
     private void FixedUpdate()
     {
         ProjectileMove();
+
+     
+    }
+
+    private void Update()
+    {
+        lifeTime += Time.deltaTime;
+    }
+
+    public virtual void Initilize()
+    {
+        TimeOutDestroy();
+    }
+
+    public void TimeOutDestroy()
+    {
+        Destroy(this.gameObject,projectileLifeTime);
+
     }
 }
