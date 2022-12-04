@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8346844575110401422}
   - component: {fileID: -4704358545411783955}
   - component: {fileID: -3578038134293402966}
+  - component: {fileID: 6639897981428222418}
   m_Layer: 0
   m_Name: Boomerang
   m_TagString: Untagged
@@ -119,8 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb6561919ad7f8479dcae8c5c76d581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 15
+  projectileSpeed: 20
   projectileLifeTime: 5
+  damage: 1
+  projectileHealth: 1000
+  damagesOnStay: 1
   speedCurve:
     serializedVersion: 2
     m_Curve:
@@ -134,32 +138,66 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.25030285
     - serializedVersion: 3
-      time: 0.50363827
-      value: -0.014523156
-      inSlope: -3.9371686
-      outSlope: -3.9371686
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.38311705
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.1811111
-      value: -2.7631466
-      inSlope: -1.4970348
-      outSlope: -1.4970348
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.5694526
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 2.7258964
-      value: -6.795203
-      inSlope: -0.864877
-      outSlope: -0.864877
+      time: 0.31530738
+      value: 0.23717055
+      inSlope: -2.8724751
+      outSlope: -2.8724751
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.49583313
+      value: 0.023750342
+      inSlope: 0.033219278
+      outSlope: 0.033219278
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33966684
+    - serializedVersion: 3
+      time: 1.0061464
+      value: -0.824506
+      inSlope: -1.0583245
+      outSlope: -1.0583245
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.05261332
+    - serializedVersion: 3
+      time: 1.0437608
+      value: -1.0156046
+      inSlope: -3.3918724
+      outSlope: -3.3918724
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 2.652471
+      value: -1.6997442
+      inSlope: -0.115602404
+      outSlope: -0.115602404
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.088670336
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &6639897981428222418
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8346844575110401416}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
